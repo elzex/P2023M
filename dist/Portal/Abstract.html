@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>アブストラクト閲覧</title>
+</head>
+
+
+<body>
+	<div class="form-wrapper">
+		<h1>アブストラクト閲覧</h1>
+		<div class="topButton">
+			<div class="myPageButton">
+				<input type="button" class="button left" value="戻る" id="back">
+				<input type="button" class="button right" value="Registration" id="regi" style="display: none;">
+			</div>
+		</div>
+		<table border="1" id="table" class="table" cellpadding="10">
+			<tr>
+				<th>投稿者</th>
+				<th>タイトル</th>
+				<th>閲覧</th>
+			</tr>
+		</table>
+		<div class="form-footer">
+		</div>
+	</div>
+
+	<div class="popup-window" style="display: none;" id="popup">
+		<div class="popup-background"></div>
+		<div class="popup-box">
+			<div class="popup-content">
+				<label for="close-popup" class="close">閉じる</label>
+				<button type="button" id="close-popup" style="display: none;"></button>
+				<div id="absBody" class="textBox">
+					<p id="title" class="underLine"></p>
+					<div id="absMain"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./script/Abstract.js"></script>
+</body>
+
+</html>

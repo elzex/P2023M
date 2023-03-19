@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マイページ</title>
+</head>
+
+<body>
+    <div class="popup-bg-cover" id="popup-bg"></div>
+    <div class="form-wrapper">
+        <h1>マイページ</h1>
+        <div class="topButton">
+            <div class="myPageButton">
+                <input type="button" class="button left" value="戻る" id="back">
+                <input type="button" class="button right" value="Registration" id="regi" style="display: none;">
+            </div>
+        </div>
+        <div class="tabs">
+            <input id="profileData" type="radio" name="tab_item" checked>
+            <label class="tab_item" for="profileData">アカウント情報</label>
+            <input id="paperData" type="radio" name="tab_item">
+            <label class="tab_item" for="paperData">アブストラクト</label>
+
+            <div class="tab_content" id="profileData_content">
+                <div class="tab_content_description">
+                    <p class="c-txtsp" id="profileDefaultMessage">Now Loading...</p>
+                    <table class="profile-table" id="Profile" style="visibility: hidden;">
+                        <tr>
+                            <th class="contact-item1">氏名</th>
+                            <td class="contact-body1">
+                                <div id="Name" class="tbInner"></div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th class="contact-item1">所属機関・部門</th>
+                            <td class="contact-body1">
+                                <div id="Aff" class="tbInner"></div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th class="contact-item1">職（学年）</th>
+                            <td class="contact-body1">
+                                <div id="Job" class="tbInner"></div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th class="contact-item1">電話番号</th>
+                            <td class="contact-body1">
+                                <div id="PhoneBody" class="tbInner"></div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th class="contact-item1">メールアドレス</th>
+                            <td class="contact-body1">
+                                <div id="Mail" class="tbInner"></div>
+                            </td>
+                        </tr>
+
+                        <tr id="Participation">
+                            <th class="contact-item1">参加情報</th>
+                            <td class="contact-body1">
+                                <div id="ParticipationBody" class="tbInner"></div>
+                            </td>
+                        </tr>
+
+                        <tr id="Title">
+                            <th class="contact-item1">講演題目</th>
+                            <td class="contact-body1">
+                                <div id="TitleBody" class="tbInner"></div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th class="contact-item1">連名者</th>
+                            <td class="contact-body1">
+                                <div id="Joint" class="tbInner"></div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th class="contact-item1">希望発表時間帯</th>
+                            <td class="contact-body1">
+                                <div id="Preferred" class="tbInner"></div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th class="contact-item1">出張日程</th>
+                            <td class="contact-body1">
+                                <div id="Schedule" class="tbInner"></div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th class="contact-item1">出張旅費の援助</th>
+                            <td class="contact-body1">
+                                <div id="Support" class="tbInner"></div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th class="contact-item1">その他</th>
+                            <td class="contact-body1">
+                                <div id="Comment" class="tbInner"></div>
+                            </td>
+                        </tr>
+                        <!-- 
+                        <tr>
+                            <th class="contact-item1">QR code</th>
+                            <td align="center" class="contact-body1">
+                                <p id="NowL">Now Loading...</p>
+                                <div id="onImg">
+                                    <img class="img1" id="qr">
+                                </div>
+                            </td>
+                        </tr> 
+                        -->
+
+                    </table>
+                </div>
+            </div>
+
+            <div class="tab_content" id="paperData_content">
+                <div class="tab_content_description">
+                    <p class="c-txtsp" id="absDefault">Now Loading...</p>
+                    <div class="button-panel" style="display: none;" id="postButton">
+                        <button class="button" id="post">アブストラクト投稿</button>
+                    </div>
+
+                    <div id="absBody" style="display: none;" class="textBox">
+                        <p id="title" class="underLine"></p>
+                        <div id="absMain"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-footer"></div>
+
+    </div>
+
+
+    <div class="popup-window" style="display: none;" id="test">
+        <div class="popup-background"></div>
+        <div class="popup-box">
+            <div class="popup-content">
+                <label for="close-popup" class="close">閉じる</label>
+                <button type="button" id="close-popup" style="display: none;"></button>
+                <form class="postAbs">
+
+                    <input type="text" class="textarea-primary" id="absTitle" placeholder="タイトル" required>
+                    <textarea id="absInput" class="textarea-primary" placeholder="本文(200文字程度)" 　required></textarea>
+
+                    <div class="button-panel">
+                        <input type="submit" class="button" value="登録">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script/Mypage.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+{
+  "hosting": {
+    "public": "dist",
+    "site": "ikulab",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+  
+}

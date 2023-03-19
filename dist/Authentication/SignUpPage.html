@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>参加登録ページ</title>
+</head>
+
+<body>
+    <div class="form-wrapper">
+        <h1>参加申し込みフォーム</h1>
+        <form class="signUp">
+            <div class="form-item">
+                <label for="FirstName">*氏名</label>
+                <input type="text" name="Name" placeholder="（例）山田　太郎" required>
+            </div>
+            <div class="form-item">
+                <label for="Aff">*所属機関・部門</label>
+                <input type="text" name="Aff" placeholder="（例）〇〇大学・大学院〇〇研究科" required>
+            </div>
+            <div class="form-item">
+                <label for="Job">*職（学年）</label>
+                <input type="text" name="Job" placeholder="" required>
+            </div>
+            <div class="form-item">
+                <label for="email">*メールアドレス(個人用ページのログインIDとなります)</label>
+                <input type="email" name="eMail" placeholder="（例）hogehoge@example.com" required>
+            </div>
+            <div class="form-item">
+                <label for="Phone">＊電話番号(ハイフンなし)</label>
+                <input type="text" name="PhoneNumber" placeholder="（例）0123456789" required>
+            </div>
+            <div class="form-item">
+
+                <label for="Participate">*参加形態</label>
+                <select id="Participate" name="Participate" required>
+                    <option value="">選択してください</option>
+                    <option value="Y">発表有</option>
+                    <option value="N">参加のみ</option>
+                </select>
+                <!--
+                <input type="text" name="Title" placeholder="講演題目" style="display: none;" id="tForm">
+                -->
+                <div class="error" id="participation-err"></div>
+            </div>
+            <div class="form-item">
+                <label for="Joint">*連名者（単著・参加のみ等の場合は なし と記載してください)</label><br>
+                <textarea name="Joint" class="textarea-primary" placeholder="（例）山田　太郎，佐藤　花子" required></textarea>
+            </div>
+            <div class="form-item">
+                <label for="PreferredTime">希望発表時間帯をご記入ください</label>
+                <input type="text" name="PreferredTime" placeholder="">
+            </div>
+            <div class="form-item">
+                <label for="Schedule">*出張日程</label>
+                <select name="Schedule" required>
+                    <option value="">選択してください</option>
+                    <option value="日帰り">日帰り</option>
+                    <option value="１泊">１泊</option>
+                    <option value="２泊">２泊</option>
+                </select>
+            </div>
+            <div class="form-item">
+                <label for="Support">*旅費の援助</label>
+                <select name="Support" required>
+                    <option value="">選択してください</option>
+                    <option value="Yes">希望する</option>
+                    <option value="No">希望しない</option>
+                </select>
+                <!--説明を書く-->
+            </div>
+            <div class="form-item">
+                <label for="Comment">その他（希望事項等）</label><br>
+                <textarea name="Comment" class="textarea-primary"></textarea>
+            </div>
+            <div class="form-item">
+                <label for="Password1">*パスワード</label>
+                <input type="password" name="Password1" placeholder="パスワード" required>
+                <label for="Password2">*パスワード（確認）</label>
+                <input type="password" name="Password2" placeholder="パスワード（確認）" required>
+                <div class="error" id="pass-err"></div>
+            </div>
+
+            <div class="button-panel">
+                <input type="submit" class="button" value="登録">
+            </div>
+        </form>
+        <div class="form-footer">
+            <label for="signIn">参加申し込み済みの場合→</label>
+            <a href="./SignInPage.html">サインイン</a>
+        </div>
+
+    </div>
+
+    <canvas id="canvas"></canvas>
+    <div id="res"></div>
+
+    <script src="./script/SignUpPage.js"></script>
+</body>
+
+</html>

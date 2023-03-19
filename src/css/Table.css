@@ -1,0 +1,46 @@
+.profile-table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px black solid;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-table th {
+    background-color: whitesmoke;
+    border: 2px black solid;
+    width: 30%;
+}
+
+.profile-table td {
+    padding: 2px;
+    border: 2px black solid;
+    width: auto;
+}
+
+.paper-table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px black solid;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.paper-table th {
+    background-color: whitesmoke;
+    border: 2px black solid;
+    width: 25%;
+}
+
+.paper-table td {
+    padding: 2px;
+    border: 2px black solid;
+    width: auto;
+}
+
+.abstd {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 5px;
+    color: black;
+}
